@@ -302,7 +302,8 @@ let data = {
 //  2- You need to round the average to the nearest lower number 
 
 const classesAvg = (data) => {
-    for (let i = 0; i < data.grades.length; i++) {
+    for (let i = 0; i < data.grades.length; i++) 
+    {
         for (let j = 0; j < data.grades[i].classes.length; j++) {
            let avrg = 0;
            let count = 0;
