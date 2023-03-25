@@ -18,15 +18,14 @@
 // 
 
 const oddFiltration = (arr) => {
-    // write your code here
-    const result = arr.filter(num => {
-        if (num % 2 == 1) {
-            return num
-        }
+  // write your code here
+  const result = arr.filter(num => {
+    return num % 2 == 1
 
-    }
-    )
-    return result
+  }
+
+  )
+  return result
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -78,23 +77,24 @@ const oddFiltration = (arr) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvsFiltration = (arr) => {
-    // write your code here
+  // write your code here
 
-    const result = arr.filter(candidate => {
-        if (candidate.yearsOfExperience > 4 && candidate.tech == 'JS') {
-          let fullName;
-          if (candidate.firstName && candidate.LastName) {
-            fullName = `${candidate.firstName} ${candidate.LastName}`;
-          } else if (candidate.firstName === null) {
-            fullName = candidate.LastName;
-          } else {
-            fullName = candidate.firstName;
-          }
-          return { fullName, tech: candidate.tech };;
-        }
-      });
-      return result;
-    };
+  const result = arr.filter(candidate => {
+    return (candidate.yearsOfExperience > 4 && candidate.tech == 'JS')
+  });
+  const result2 = result.map(candidate => {
+    let fullName;
+    if (candidate.firstName !== null && candidate.LastName !== null) {
+      fullName = `${candidate.firstName} ${candidate.LastName}`;
+    } else if (candidate.firstName === null) {
+      fullName = candidate.LastName;
+    } else {
+      fullName = candidate.firstName;
+    }
+    return { fullName, tech: candidate.tech };
+  })
+  return result2;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ const cvsFiltration = (arr) => {
 // 
 
 const vowelsFiltration = (arr) => {
-    // write your code here
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -130,7 +130,7 @@ const vowelsFiltration = (arr) => {
 // - the 'include' method can help you, read about it.
 
 const skillComparison = (arr1, arr2) => {
-    // write your code here
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
