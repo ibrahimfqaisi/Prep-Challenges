@@ -109,9 +109,16 @@ return reverse
 // };
 //
 
-const statistics = (obj) => {
+const statistics = (arr) => {
     // write your code here
-   
+   let result = arr.reduce((acc,cur)=>{
+
+    let key =cur["votes_To"];
+    acc[key]=(acc[key]||0) +1;
+    return acc
+   },{}
+   )
+   return result
 }
 // -------------------------------------------------------------------------------------------------------
 
