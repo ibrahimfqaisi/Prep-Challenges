@@ -67,8 +67,8 @@ const recursionPattern = (int1, int2) => {
 
 const filterLinks = (str) => {
     // write your code here
-    let m = str.split('"')
-    return (m[1].substr(7, str.length))
+    let m =str.split('"')
+    return(m[1].substr(7,str.length))
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -88,9 +88,9 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
-    let correct = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
-    let reversed = correct.split("").reverse().join("")
-    return correct == reversed
+  let correct  = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
+   let reversed = correct.split("").reverse().join("")
+   return correct==reversed
 }
 
 // -------------------------------------------------------------------------------------------------------
