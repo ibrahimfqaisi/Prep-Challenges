@@ -16,20 +16,38 @@
 
 const recursionPattern = (int1, int2) => {
     // write your code here
-    const arr=[]
-    let nam=int1
-    for (let i = 0; i < Math.floor(int1/int2)+1; i++) {
-        arr.push(nam)
-        nam=nam-int2
-       
-    }
-    for (let i = 0; i < Math.floor(int1/int2)+2; i++) {
-       
-        arr.push(nam) 
-        nam=nam+int2
-       
+    let arr = []
+    let num = int1
+    test(int1, int2)
+    function test(int1, int2) {
+        if (int1 < 0) {
+            test2(int1, int2)
+            function test2(int1, int2) {
+                if (int1 == num) {
+                    arr.push(int1)
+                } else {
+                    return (arr.push(int1), test2(int1 + int2, int2))
+                }
+            }
+        } else {
+            return (arr.push(int1), test(int1 - int2, int2))
+        }
     }
     return arr
+    // const arr=[]
+    // let nam=int1
+    // for (let i = 0; i < Math.floor(int1/int2)+1; i++) {
+    //     arr.push(nam)
+    //     nam=nam-int2
+
+    // }
+    // for (let i = 0; i < Math.floor(int1/int2)+2; i++) {
+
+    //     arr.push(nam) 
+    //     nam=nam+int2
+
+    // }
+    // return arr
 }
 // -------------------------------------------------------------------------------------------------------
 
