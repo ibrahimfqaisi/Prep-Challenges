@@ -14,6 +14,10 @@
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
 
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
 const recursionPattern = (int1, int2) => {
     // write your code here
     let arr = []
