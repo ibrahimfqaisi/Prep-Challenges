@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "unction appendAndDelete(s, t, k) {\n    // Write your code here\n\n\n    let s_Str = s.split(\"\")\n    let t_Str = t.split(\"\")\n    \n    let count = 0;\n    let defCount =0;\n    \n    for(let i =0; i< s_Str.length || i< t_Str.length;i++ ){\n        if(s_Str[i] === t_Str[i]){\n            count++\n        } else {\n            for(let j =i; j< s_Str.length || j< t_Str.length;j++ ){\n                defCount++ \n                i++;\n            }\n        }\n    }\n    \n    let neededNumOfOps = ((defCount + (t_Str.length - count))) ;\n    \n    if(neededNumOfOps > k ){\n        return \"No\"\n    } else if(t_Str.length > s_Str.length){\n        if((s_Str.length + t_Str.length) % 2 == k%2  ){\n            return \"Yes\"\n        }else {\n            return \"No\"\n        }\n    }else {\n        return \"Yes\"\n        \n    }\n  \n}\n"
             ],
             "outputs": []
         },
@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                " \nlet num1, num2;\nlet col, row;\nlet leng = s.split(\" \").join(\"\");\nlet str1 = Math.sqrt(leng.length);\nlet str2 = Math.floor(str1);\n\nif (str1 == str2) {\n  col = str2;\n  row = str2;\n} else {\n  num1 = str2 + 1;\n  num2 = str2;\n  if (leng.length <= num1 * num2) {\n    col = str2 + 1;\n    row = str2;\n  } else {\n    col = str2 + 1;\n    row = str2 + 1;\n  }\n}\n\nlet arr = []\nlet i = 0;\nfor (let index = 0; index < row; index++) {\n  if (leng.length > i + col) {\n    arr.push(leng.substr(i, col));\n    i += col;\n  } else {\n    arr.push(leng.substr(i, leng.length));\n  }\n}\n\nlet str = \"\";\nfor (let i = 0; i < arr[0].length; i++) {\n  for (let j = 0; j < arr.length; j++) {\n    if (arr[j][i] !== undefined) {\n      str += arr[j][i];\n    }\n  }\n  if (i < arr[0].length - 1) {\n    str += \" \";\n  }\n}"
             ],
             "outputs": []
         },
